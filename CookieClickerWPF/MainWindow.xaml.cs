@@ -20,9 +20,18 @@ namespace CookieClickerWPF
     /// </summary>
     public partial class MainWindow : Window
     {
+        double Cookies = 0;
+
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void bt_Clicker_Click(object sender, RoutedEventArgs e)
+        {
+            Cookies++;
+
+            txt_Cookies.Text = Convert.ToString(Cookies);
         }
     }
 }

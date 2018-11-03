@@ -5,10 +5,19 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CookieClickerWPF"
         mc:Ignorable="d"
-        Title="MainWindow" Height="480" Width="320">
+        Title="Cookie Clicker WPF" Height="480" Width="320">
+    <Window.Background>
+        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+            <GradientStop Color="White" Offset="0"/>
+            <GradientStop Color="#FF2F8DFF" Offset="1"/>
+            <GradientStop Color="#FEFFFFFF"/>
+        </LinearGradientBrush>
+    </Window.Background>
     <Grid>
         <TextBlock x:Name="txt_Cookies" HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" RenderTransformOrigin="-0.498,1.84" Height="44" Width="292" FontSize="24" FontWeight="Bold" TextAlignment="Center"/>
-        <Button x:Name="bt_Clicker" Content="Button" HorizontalAlignment="Left" Margin="75,139,0,0" VerticalAlignment="Top" Width="161" Height="102" Click="bt_Clicker_Click"/>
+        <Button x:Name="bt_Clicker" Content="Cookie" HorizontalAlignment="Left" Margin="75,139,0,0" VerticalAlignment="Top" Width="161" Height="102" Click="bt_Clicker_Click" Background="#FFCB8520"/>
+        <Button x:Name="bt_Multiplyer" Content="Cost : 10" HorizontalAlignment="Left" Margin="199,380,0,0" VerticalAlignment="Top" Width="73" Height="59" Click="bt_Multiplyer_Click"/>
+        <TextBlock x:Name="txt_Multiplier" HorizontalAlignment="Left" Margin="10,400,0,0" TextWrapping="Wrap" Text="Click to upgrade -&gt;" VerticalAlignment="Top" Height="25" Width="184" FontSize="14"/>
 
     </Grid>
 </Window>

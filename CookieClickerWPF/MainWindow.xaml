@@ -14,10 +14,22 @@
         </LinearGradientBrush>
     </Window.Background>
     <Grid>
-        <TextBlock x:Name="txt_Cookies" HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" RenderTransformOrigin="-0.498,1.84" Height="44" Width="292" FontSize="24" FontWeight="Bold" TextAlignment="Center"/>
-        <Button x:Name="bt_Clicker" Content="Cookie" HorizontalAlignment="Left" Margin="75,139,0,0" VerticalAlignment="Top" Width="161" Height="102" Click="bt_Clicker_Click" Background="#FFCB8520"/>
-        <Button x:Name="bt_Multiplyer" Content="Cost : 10" HorizontalAlignment="Left" Margin="199,380,0,0" VerticalAlignment="Top" Width="73" Height="59" Click="bt_Multiplyer_Click"/>
-        <TextBlock x:Name="txt_Multiplier" HorizontalAlignment="Left" Margin="10,400,0,0" TextWrapping="Wrap" Text="Click to upgrade -&gt;" VerticalAlignment="Top" Height="25" Width="184" FontSize="14"/>
+        <Image x:Name="image" HorizontalAlignment="Left" Height="162" Margin="74,101,0,0" VerticalAlignment="Top" Width="162" Source="Cookie.png"/>
+
+        <TextBlock x:Name="txt_Cookies" HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" RenderTransformOrigin="-0.498,1.84" Height="36" Width="292" FontSize="24" FontWeight="Bold" TextAlignment="Center"/>
+        <Button x:Name="bt_Upgrade" Content="CPS * 2&#xD;&#xA;&#xD;&#xA;Cost : 10" HorizontalAlignment="Left" Margin="10,369,0,0" VerticalAlignment="Top" Width="84" Height="70" Click="bt_Upgrade_Click" RenderTransformOrigin="1.199,0.548"/>
+        <TextBlock x:Name="txt_Upgrades" HorizontalAlignment="Left" Margin="10,288,0,0" TextWrapping="Wrap" Text="Upgrades" VerticalAlignment="Top" Height="25" Width="292" FontSize="16" TextAlignment="Center" FontWeight="Bold"/>
+        <Button x:Name="bt_Clicker" Content="Cookie" HorizontalAlignment="Left" Margin="74,101,0,0" VerticalAlignment="Top" Width="162" Height="162" Click="bt_Clicker_Click" FontWeight="Bold" FontSize="20" BorderBrush="#00707070">
+            <Button.Background>
+                <ImageBrush/>
+            </Button.Background>
+        </Button>
+        <TextBlock x:Name="txt_CPS" HorizontalAlignment="Left" Margin="10,46,0,0" TextWrapping="Wrap" Text="Cookie per second:  1" VerticalAlignment="Top" RenderTransformOrigin="-0.498,1.84" Height="36" Width="292" TextAlignment="Center"/>
+        <Button x:Name="bt_Factory" Content="CPS * 0.5&#xD;&#xA;&#xD;&#xA;Cost : 100" HorizontalAlignment="Left" Margin="218,369,0,0" VerticalAlignment="Top" Width="84" Height="70" Click="bt_Factory_Click" RenderTransformOrigin="1.199,0.548"/>
+        <Button x:Name="bt_Grandma" Content="CPS * 0.2&#xD;&#xA;&#xD;&#xA;Cost : 25" HorizontalAlignment="Left" Margin="110,369,0,0" VerticalAlignment="Top" Width="84" Height="70" Click="bt_Grandma_Click" RenderTransformOrigin="1.199,0.548"/>
+        <TextBlock x:Name="txt_Factory" HorizontalAlignment="Left" Margin="218,318,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="41" Width="84" TextAlignment="Center"><Run Text="Cookie "/><LineBreak/><Run Text="Factory"/></TextBlock>
+        <TextBlock x:Name="txt_Grandma" HorizontalAlignment="Left" Margin="110,318,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="41" Width="84" TextAlignment="Center" RenderTransformOrigin="-0.9,0.688"><Run Text="Grandma's"/><LineBreak/><Run Text="Cookies"/></TextBlock>
+        <TextBlock x:Name="txt_Clicker" HorizontalAlignment="Left" Margin="10,318,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="41" Width="84" TextAlignment="Center" RenderTransformOrigin="-0.9,0.688"><Run Text="Clicker "/><LineBreak/><Run Text="Upgrade"/></TextBlock>
 
     </Grid>
 </Window>

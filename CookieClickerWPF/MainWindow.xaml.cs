@@ -51,6 +51,8 @@ namespace CookieClickerWPF
         void TicTimer(object sender, EventArgs e)
         {
             Cookies = Cookies + CPS;
+            // Cookies = Round(Cookies);
+            // CPS = Round(CPS);
             txt_Cookies.Text = Convert.ToString(Cookies);
         }
 
@@ -59,7 +61,6 @@ namespace CookieClickerWPF
         {
             Cookies = Cookies + CPS;
             
-            Cookies = Round(Cookies);
             txt_Cookies.Text = Convert.ToString(Cookies);
         }
 
@@ -88,7 +89,6 @@ namespace CookieClickerWPF
             // Either way update what the button says the cost is to the new cost
             bt_Upgrade.Content = "CPS * 2\n\nCost : " + UpgradeCost;
 
-            Cookies = Round(Cookies);
             txt_Cookies.Text = Convert.ToString(Cookies);
             txt_CPS.Text = "Cookies per second: " + CPS;
         }
@@ -99,7 +99,7 @@ namespace CookieClickerWPF
             {
                 Cookies = Cookies - GrandmaUpCost;
                 GrandmaUpCost = GrandmaUpCost * 1.5;
-                CPS = CPS * 0.2;
+                CPS = CPS + CPS * 0.2;
                 txt_Cookies.Text = Convert.ToString(Cookies);
             }
             else
@@ -109,8 +109,7 @@ namespace CookieClickerWPF
                 txt_Upgrades.Text = "Upgrades:";
             }
             bt_Grandma.Content = "CPS * 0.2\n\nCost : " + GrandmaUpCost;
-
-            Cookies = Round(Cookies);
+            
             txt_Cookies.Text = Convert.ToString(Cookies);
             txt_CPS.Text = "Cookies per second: " + CPS;
         }
@@ -121,7 +120,7 @@ namespace CookieClickerWPF
             {
                 Cookies = Cookies - FactoryUpCost;
                 FactoryUpCost = FactoryUpCost * 3;
-                CPS = CPS * .5;
+                CPS = CPS + CPS * .5;
                 txt_Cookies.Text = Convert.ToString(Cookies);
             }
             else
@@ -131,8 +130,7 @@ namespace CookieClickerWPF
                 txt_Upgrades.Text = "Upgrades:";
             }
             bt_Factory.Content = "CPS * 0.5\n\nCost : " + FactoryUpCost;
-
-            Cookies = Round(Cookies);
+            
             txt_Cookies.Text = Convert.ToString(Cookies);
             txt_CPS.Text = "Cookies per second: " + CPS;
         }
